@@ -85,7 +85,7 @@ namespace CadastroEditora
             using (SqlCommand command = Connection.CreateCommand())
             {
                 StringBuilder sql = new StringBuilder();
-                sql.AppendLine($"SELECT COUNT(*) FROM mvtBibEditora WHERE codEditora = @codEditora");
+                sql.AppendLine($"SELECT COUNT(codEditora) FROM mvtBibEditora WHERE codEditora = @codEditora");
                 command.CommandText= sql.ToString();
                 command.Parameters.AddWithValue("@codEditora", editora.CodEditora);
                 int count = Convert.ToInt32(command.ExecuteScalar());
