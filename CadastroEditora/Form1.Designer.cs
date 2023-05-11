@@ -157,6 +157,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormCadEditora";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nova Editora";
             this.Load += new System.EventHandler(this.FormCadEditora_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgDadosEditora)).EndInit();
