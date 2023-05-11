@@ -17,10 +17,10 @@ C:\Users\estagiario1\Documents\Movtech\Projeto 1\Movtech-Biblioteca-Editora\Cada
 C:\Users\estagiario1\Documents\Movtech\Projeto 1\Movtech-Biblioteca-Editora\CadastroEditora\bin\Debug\Microsoft.VisualStudio.DebuggerVisualizers.dll
 C:\Users\estagiario1\Documents\Movtech\Projeto 1\Movtech-Biblioteca-Editora\CadastroEditora\obj\Debug\CadastroEditora.csproj.AssemblyReference.cache
 C:\Users\estagiario1\Documents\Movtech\Projeto 1\Movtech-Biblioteca-Editora\CadastroEditora\obj\Debug\CadastroEditora.csproj.SuggestedBindingRedirects.cache
-C:\Users\estagiario1\Documents\Movtech\Projeto 1\Movtech-Biblioteca-Editora\CadastroEditora\obj\Debug\CadastroEditora.Form1.resources
 C:\Users\estagiario1\Documents\Movtech\Projeto 1\Movtech-Biblioteca-Editora\CadastroEditora\obj\Debug\CadastroEditora.Properties.Resources.resources
 C:\Users\estagiario1\Documents\Movtech\Projeto 1\Movtech-Biblioteca-Editora\CadastroEditora\obj\Debug\CadastroEditora.csproj.GenerateResource.cache
 C:\Users\estagiario1\Documents\Movtech\Projeto 1\Movtech-Biblioteca-Editora\CadastroEditora\obj\Debug\CadastroEditora.csproj.CoreCompileInputs.cache
 C:\Users\estagiario1\Documents\Movtech\Projeto 1\Movtech-Biblioteca-Editora\CadastroEditora\obj\Debug\CadastroEditora.csproj.CopyComplete
 C:\Users\estagiario1\Documents\Movtech\Projeto 1\Movtech-Biblioteca-Editora\CadastroEditora\obj\Debug\CadastroEditora.exe
 C:\Users\estagiario1\Documents\Movtech\Projeto 1\Movtech-Biblioteca-Editora\CadastroEditora\obj\Debug\CadastroEditora.pdb
+C:\Users\estagiario1\Documents\Movtech\Projeto 1\Movtech-Biblioteca-Editora\CadastroEditora\obj\Debug\CadastroEditora.FormCadEditora.resources
