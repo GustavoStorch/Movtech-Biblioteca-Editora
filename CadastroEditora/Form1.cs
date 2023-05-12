@@ -55,6 +55,7 @@ namespace CadastroEditora
                             CodEditora = txtCodEditora.Text,
                             NomeEditora = txtNomeEditora.Text
                         });
+                        MessageBox.Show("Editora atualizada com sucesso!");
                     } else
                     {
                         dao.Salvar(new EditoraModel()
@@ -62,8 +63,9 @@ namespace CadastroEditora
                             CodEditora = txtCodEditora.Text,
                             NomeEditora = txtNomeEditora.Text
                         });
+                        MessageBox.Show("Editora salvo com sucesso!");
                     }
-                    MessageBox.Show("Editora salvo com sucesso!");
+                    
                 }
                 InitializeTable();
                 limparForm();
