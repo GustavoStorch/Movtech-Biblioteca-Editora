@@ -28,42 +28,44 @@ namespace CadastroEditora
         //Botão com a funcionalidade de salvar/persistir os dados inseridos no banco de dados.
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(txtCodEditora.Text) || string.IsNullOrWhiteSpace(txtCodEditora.Text)){
-                MessageBox.Show("Informe o campo do Código da Editora");
-                return;
-            } else if (string.IsNullOrEmpty(txtNomeEditora.Text) || string.IsNullOrWhiteSpace(txtNomeEditora.Text))
-            {
-                MessageBox.Show("Informe o campo do Nome da Editora");
-                return;
-            }
-
             try
             {
                 using (SqlConnection connection = DaoConnection.GetConexao())
                 { 
                     EditoraDAO dao = new EditoraDAO(connection);
 
-                    int count = dao.VerificaRegistros(new EditoraModel()
+                    bool verificaCampos = dao.VerificaCampos(new EditoraModel()
                     {
-                        CodEditora= txtCodEditora.Text
+                        CodEditora = txtCodEditora.Text,
+                        NomeEditora = txtNomeEditora.Text
                     });
 
-                    if(count > 0)
+                    if (verificaCampos)
                     {
-                        dao.Editar(new EditoraModel()
+
+                        int count = dao.VerificaRegistros(new EditoraModel()
                         {
-                            CodEditora = txtCodEditora.Text,
-                            NomeEditora = txtNomeEditora.Text
+                            CodEditora = txtCodEditora.Text
                         });
-                        MessageBox.Show("Editora atualizada com sucesso!");
-                    } else
-                    {
-                        dao.Salvar(new EditoraModel()
+
+                        if (count > 0)
                         {
-                            CodEditora = txtCodEditora.Text,
-                            NomeEditora = txtNomeEditora.Text
-                        });
-                        MessageBox.Show("Editora salvo com sucesso!");
+                            dao.Editar(new EditoraModel()
+                            {
+                                CodEditora = txtCodEditora.Text,
+                                NomeEditora = txtNomeEditora.Text
+                            });
+                            MessageBox.Show("Editora atualizada com sucesso!");
+                        }
+                        else
+                        {
+                            dao.Salvar(new EditoraModel()
+                            {
+                                CodEditora = txtCodEditora.Text,
+                                NomeEditora = txtNomeEditora.Text
+                            });
+                            MessageBox.Show("Editora salvo com sucesso!");
+                        }
                     }
                     
                 }
@@ -80,12 +82,6 @@ namespace CadastroEditora
         //Botão que realiza o Delete de um registro no banco de dados.
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtNomeEditora.Text))
-            {
-                MessageBox.Show("Escolha a editora!");
-                return;
-            }
-
             DialogResult conf = MessageBox.Show("Tem certeza que deseja excluir a editora?", "Ops, tem certeza?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             try
@@ -95,12 +91,23 @@ namespace CadastroEditora
                     using (SqlConnection connection = DaoConnection.GetConexao())
                     {
                         EditoraDAO dao = new EditoraDAO(connection);
-                        dao.Excluir(new EditoraModel()
+
+                        bool verificaCampos = dao.VerificaCampos(new EditoraModel()
                         {
-                            CodEditora = txtCodEditora.Text
+                            CodEditora = txtCodEditora.Text,
+                            NomeEditora = txtNomeEditora.Text
                         });
+
+                        if (verificaCampos)
+                        {
+                            dao.Excluir(new EditoraModel()
+                            {
+                                CodEditora = txtCodEditora.Text
+                            });
+                            MessageBox.Show("Editora excluída com sucesso!");
+                        }
                     }
-                    MessageBox.Show("Editora excluída com sucesso!");
+                    
                     InitializeTable();
                     limparForm();
                     CarregaID();

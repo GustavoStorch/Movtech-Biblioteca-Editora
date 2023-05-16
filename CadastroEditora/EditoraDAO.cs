@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CadastroEditora
 {
@@ -91,6 +92,22 @@ namespace CadastroEditora
                 int count = Convert.ToInt32(command.ExecuteScalar());
                 return count;
             }
+        }
+
+        public bool VerificaCampos(EditoraModel editora)
+        {
+            if (string.IsNullOrEmpty(editora.CodEditora) || string.IsNullOrWhiteSpace(editora.CodEditora))
+            {
+                MessageBox.Show("Informe o campo do Código da Editora");
+                return false;
+            }
+            else if (string.IsNullOrEmpty(editora.NomeEditora) || string.IsNullOrWhiteSpace(editora.NomeEditora))
+            {
+                MessageBox.Show("Informe o campo do Nome da Editora");
+                return false;
+            }
+
+            return true;
         }
 
         public List<EditoraModel> GetEditoras()
