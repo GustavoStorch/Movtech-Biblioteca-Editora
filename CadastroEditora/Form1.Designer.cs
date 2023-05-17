@@ -43,44 +43,49 @@
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(0, 9);
+            this.lblCodigo.Location = new System.Drawing.Point(0, 14);
+            this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(40, 13);
+            this.lblCodigo.Size = new System.Drawing.Size(59, 20);
             this.lblCodigo.TabIndex = 1;
             this.lblCodigo.Text = "Código";
             // 
             // lblNomeEditora
             // 
             this.lblNomeEditora.AutoSize = true;
-            this.lblNomeEditora.Location = new System.Drawing.Point(0, 31);
+            this.lblNomeEditora.Location = new System.Drawing.Point(0, 48);
+            this.lblNomeEditora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNomeEditora.Name = "lblNomeEditora";
-            this.lblNomeEditora.Size = new System.Drawing.Size(35, 13);
+            this.lblNomeEditora.Size = new System.Drawing.Size(51, 20);
             this.lblNomeEditora.TabIndex = 2;
             this.lblNomeEditora.Text = "Nome";
             // 
             // txtCodEditora
             // 
             this.txtCodEditora.Enabled = false;
-            this.txtCodEditora.Location = new System.Drawing.Point(68, 6);
+            this.txtCodEditora.Location = new System.Drawing.Point(102, 9);
+            this.txtCodEditora.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCodEditora.Name = "txtCodEditora";
-            this.txtCodEditora.Size = new System.Drawing.Size(38, 20);
+            this.txtCodEditora.Size = new System.Drawing.Size(55, 26);
             this.txtCodEditora.TabIndex = 1;
             // 
             // txtNomeEditora
             // 
             this.txtNomeEditora.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNomeEditora.Location = new System.Drawing.Point(68, 28);
+            this.txtNomeEditora.Location = new System.Drawing.Point(102, 43);
+            this.txtNomeEditora.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNomeEditora.Name = "txtNomeEditora";
-            this.txtNomeEditora.Size = new System.Drawing.Size(480, 20);
+            this.txtNomeEditora.Size = new System.Drawing.Size(718, 26);
             this.txtNomeEditora.TabIndex = 2;
             // 
             // btnSalvar
             // 
             this.btnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalvar.Location = new System.Drawing.Point(389, 54);
+            this.btnSalvar.Location = new System.Drawing.Point(584, 79);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(77, 22);
+            this.btnSalvar.Size = new System.Drawing.Size(116, 34);
             this.btnSalvar.TabIndex = 3;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -89,9 +94,10 @@
             // btnExcluir
             // 
             this.btnExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExcluir.Location = new System.Drawing.Point(471, 54);
+            this.btnExcluir.Location = new System.Drawing.Point(706, 79);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(77, 22);
+            this.btnExcluir.Size = new System.Drawing.Size(116, 34);
             this.btnExcluir.TabIndex = 4;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -109,14 +115,13 @@
             this.dtgDadosEditora.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCodEditora,
             this.colNomeEditora});
-            this.dtgDadosEditora.Location = new System.Drawing.Point(3, 81);
-            this.dtgDadosEditora.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtgDadosEditora.Location = new System.Drawing.Point(4, 125);
             this.dtgDadosEditora.Name = "dtgDadosEditora";
             this.dtgDadosEditora.ReadOnly = true;
             this.dtgDadosEditora.RowHeadersWidth = 62;
             this.dtgDadosEditora.RowTemplate.Height = 28;
             this.dtgDadosEditora.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgDadosEditora.Size = new System.Drawing.Size(545, 235);
+            this.dtgDadosEditora.Size = new System.Drawing.Size(818, 362);
             this.dtgDadosEditora.TabIndex = 5;
             this.dtgDadosEditora.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgDadosEditora_CellDoubleClick);
             // 
@@ -138,9 +143,9 @@
             // FormCadEditora
             // 
             this.AcceptButton = this.btnSalvar;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 321);
+            this.ClientSize = new System.Drawing.Size(828, 494);
             this.Controls.Add(this.dtgDadosEditora);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnSalvar);
@@ -149,6 +154,7 @@
             this.Controls.Add(this.lblNomeEditora);
             this.Controls.Add(this.lblCodigo);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormCadEditora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nova Editora";
