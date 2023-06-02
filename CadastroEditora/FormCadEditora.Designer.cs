@@ -66,6 +66,7 @@
             this.txtCodEditora.Enabled = false;
             this.txtCodEditora.Location = new System.Drawing.Point(102, 9);
             this.txtCodEditora.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCodEditora.MaxLength = 4;
             this.txtCodEditora.Name = "txtCodEditora";
             this.txtCodEditora.Size = new System.Drawing.Size(55, 26);
             this.txtCodEditora.TabIndex = 1;
@@ -76,6 +77,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNomeEditora.Location = new System.Drawing.Point(102, 43);
             this.txtNomeEditora.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNomeEditora.MaxLength = 50;
             this.txtNomeEditora.Name = "txtNomeEditora";
             this.txtNomeEditora.Size = new System.Drawing.Size(718, 26);
             this.txtNomeEditora.TabIndex = 2;
